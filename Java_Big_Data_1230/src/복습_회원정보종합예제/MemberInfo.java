@@ -26,7 +26,7 @@ public class MemberInfo { // 필드와 메소드가 있음
     }
     public void setGender() {
         while(true){
-            System.out.print("성별을 입력하세요 : ");
+            System.out.print("성별을 입력하세요 (M/F) : ");
             gender = sc.next().charAt(0); // 문자열에서 첫번째 문자를 입력 받음
             switch(gender){
                 case 'M' :
@@ -36,9 +36,30 @@ public class MemberInfo { // 필드와 메소드가 있음
                     return;
                 default :
                     System.out.println("성별을 잘못 입력 하셨습니다.");
-
             }
         }
+    }
+    //주어진 조건에 맞는 직업을 입력 받아서 jobs 필드에 저장
+    public void setJobs() {
+        while (true) {
+            System.out.print("직업을 입력 하세요 (1. 학생 2. 회사원 3. 주부 4. 무직) : ");
+            jobs = sc.nextInt();
+            if (jobs > 0 && jobs < 5) return;
+            System.out.println("직업을 잘 못 입력 하셨습니다.");
+        }
+    }
+    public int getGenderType(){
+        if (gender == 'm' || gender == 'M') return 1;
+        else return 2;
+    }
+    public void viewInfo() {
+        String[] genderStr = {"", "남성", "여성"};
+        String[] jobsStr = {"", "학생", "회사원", "주부", "무직"};
+        System.out.println("========= 회원 정보 출력 =========");
+        System.out.println("이름 : " + name);
+        System.out.println("나이 : " + age);
+        System.out.println("성별 : " + genderStr[getGenderType()]);
+        System.out.println("직업 : " + jobsStr[jobs]);
     }
 
 }
