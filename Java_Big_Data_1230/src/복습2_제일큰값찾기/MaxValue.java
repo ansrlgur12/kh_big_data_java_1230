@@ -1,4 +1,4 @@
-package 제일큰값찾기;
+package 복습2_제일큰값찾기;
 
 import java.util.Scanner;
 
