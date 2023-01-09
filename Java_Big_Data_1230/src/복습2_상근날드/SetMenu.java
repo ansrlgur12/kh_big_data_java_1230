@@ -13,20 +13,23 @@ public class SetMenu {
         int[] price = new int[5];
         Scanner sc = new Scanner(System.in);
         System.out.print("메뉴의 금액을 입력하세요 : ");
+        int menu1;
+        int menu2;
         for(int i = 0; i < price.length; i++) {
             price[i] = sc.nextInt();
         }
         if (price[0]>price[1]){
-            System.out.println(Math.min(price[1],price[2]));
+            menu1 = (Math.min(price[1],price[2]));
         }
         else {
-            System.out.println(Math.min(price[0],price[2]));
+            menu1 = (Math.min(price[0],price[2]));
         }
         if (price[3]>price[4]){
-            System.out.println(price[4]);
+            menu2 = (price[4]);
         }
         else {
-            System.out.println(price[3]);
+            menu2 = (price[3]);
         }
+        System.out.println(((menu1 + menu2) - 50) + "원" );
     }
 }

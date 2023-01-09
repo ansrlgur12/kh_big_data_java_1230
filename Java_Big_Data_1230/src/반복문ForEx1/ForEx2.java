@@ -1,4 +1,4 @@
-package 복습_반복문ForEx1;
+package 반복문ForEx1;
 
 import java.util.Scanner;
 
