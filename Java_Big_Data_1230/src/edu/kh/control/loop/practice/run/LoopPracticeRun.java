@@ -9,6 +9,12 @@ public class LoopPracticeRun {
         //loop.practice2();
         //loop.practice3();
         //loop.practice4();
-        loop.practice5();
+        //loop.practice5();
+        //loop.practice6();
+        //loop.practice7();
+        //loop.practice8();
+        //loop.practice9();
+
+        loop.practice13();
     }
 }

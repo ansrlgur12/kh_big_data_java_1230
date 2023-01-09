@@ -1,4 +1,4 @@
-package 복습_주사위게임;
+package 주사위게임;
 //주사위 2개 던져서 합 12이면 탈출하는 게임
 
 public class RandomGame {

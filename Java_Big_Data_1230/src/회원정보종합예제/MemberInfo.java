@@ -1,4 +1,4 @@
-package 복습_회원정보종합예제;
+package 회원정보종합예제;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package 복습_주사위게임;
+package 주사위게임;
 
 public class RandomGame2 {
     public static void main(String[] args) {
