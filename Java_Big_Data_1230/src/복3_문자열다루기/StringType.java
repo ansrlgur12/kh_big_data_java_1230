@@ -21,7 +21,7 @@ public class StringType {
         System.out.println(language.replaceAll("Kotlin, ", ""));
         // substring : 문자열에서 특정 문자열을 뽑아낼때 사용
         String e = "Hello Java";
-        System.out.println(e.substring(6)); // 시작 인덱스 부터 끝까지 추출
+        System.out.println(e.substring(6)); // 시작 인덱스 부터 끝까지 추출 ///////////<<<<<<<<<<<<<<<<<<<,
         System.out.println(e.substring(1, 4)); // 시작 인덱스 부터 종료 인덱스 미만까지 추출
         // toUpperCase / toLowerCase : 문자열을 모두 대문자 또는 소문자로 변경
         System.out.println(e.toUpperCase());
