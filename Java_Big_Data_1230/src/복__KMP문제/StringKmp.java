@@ -12,7 +12,7 @@ public class StringKmp {
 
         // 첫번째 방법 : split()
 //        String[]splitName = name.split("-");
-//        for (String e : splitName) System.out.print(e.charAt(0));
+//        for (String e : splitName) System.out.print(e.charAt(0)); ??
 
         // 두번째 방법 : 대문자만 골라내는 방법
 //        for (int i = 0; i < name.length(); i++){

@@ -23,6 +23,6 @@ public class StringAppend {
         System.out.println(a.substring(a.length() - num) + b);
     }
 }
-// int position = fststr.length() - n
-// string sub = fststr.substring(position);
-// system.out.println(sub + secstr);
+// int position = a.length() - num
+// string sub = a.substring(position);
+// system.out.println(sub + b);
