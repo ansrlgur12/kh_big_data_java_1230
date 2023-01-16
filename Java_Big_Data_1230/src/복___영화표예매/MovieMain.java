@@ -27,6 +27,5 @@ public class MovieMain {
                 break;
             }
          }
-
     }
 }
