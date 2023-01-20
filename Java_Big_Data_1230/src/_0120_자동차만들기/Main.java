@@ -6,6 +6,9 @@ import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
+            Sedan sedan = new Sedan("아반떼");
+            Bus bus = new Bus("고속버스");
+            SportsCar sportsCar = new SportsCar("포르쉐");
             System.out.print("이동지역을 선택하세요 [1] 부산 [2] 대전 [3] 강릉 [4] 광주 : ");
             int area = sc.nextInt();
             if (area < 1 || area > 4) {
@@ -20,27 +23,18 @@ public class Main {
                 }
                 else if (passenger > 5) {
                     System.out.println(passenger + "명은 버스밖에 못탑니다");
-                    Bus bus = new Bus("고속버스");
-                    bus.turboOnOff();
-                    bus.setAmount(area);
-                    bus.setGasStation(area);
-                    bus.time(area);
+
+                    bus.getInfo(area);
                     break;
                 } else if (passenger > 2) {
                     System.out.print("이동 차량을 선택하세요 [1] 승용차 [2] 버스 : ");
                     int v = sc.nextInt();
                     if (v == 1) {
-                        Sedan sedan = new Sedan("아반떼");
                         sedan.turboOnOff();
-                        sedan.setAmount(area);
-                        sedan.setGasStation(area);
-                        sedan.time(area);
+                        sedan.getInfo(area);
                     } else {
-                        Bus bus = new Bus("고속버스");
                         bus.turboOnOff();
-                        bus.setAmount(area);
-                        bus.setGasStation(area);
-                        bus.time(area);
+                        bus.getInfo(area);
                     }
                     break;
                 } else {
@@ -48,27 +42,18 @@ public class Main {
                     int v = sc.nextInt();
                     switch (v) {
                         case 1: {
-                            SportsCar sportsCar = new SportsCar("포르쉐");
                             sportsCar.turboOnOff();
-                            sportsCar.setAmount(area);
-                            sportsCar.setGasStation(area);
-                            sportsCar.time(area);
+                            sportsCar.getInfo(area);
                             break;
                         }
                         case 2: {
-                            Sedan sedan = new Sedan("아반떼");
                             sedan.turboOnOff();
-                            sedan.setAmount(area);
-                            sedan.setGasStation(area);
-                            sedan.time(area);
+                            sedan.getInfo(area);
                             break;
                         }
                         case 3: {
-                            Bus bus = new Bus("고속버스");
                             bus.turboOnOff();
-                            bus.setAmount(area);
-                            bus.setGasStation(area);
-                            bus.time(area);
+                            bus.getInfo(area);
                             break;
                         }
                         default:

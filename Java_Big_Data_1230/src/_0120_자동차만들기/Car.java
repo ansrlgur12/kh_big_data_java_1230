@@ -1,7 +1,7 @@
 package _0120_자동차만들기;
 
 import java.util.Scanner;
-public class Car {
+abstract public class Car {
     String name;
     int speed;
     int fuel;
@@ -10,23 +10,16 @@ public class Car {
     int[] areaKm = {0,400, 200, 150, 300};
     Scanner sc = new Scanner(System.in);
 
-
     Car(String name) {
         this.name = name;
     }
-    void time(int area) {
-        double time = (double)areaKm[area] / speed;
-        System.out.printf("%.2f시간이 걸립니다", time);
+    void getInfo(int area){
+        System.out.println(name + "을(를) 탑니다.");
+        System.out.printf("총 %.2f시간 걸립니다.\n", (double)areaKm[area] / speed);
+        System.out.println(name + "가 주유소에 들려야할 횟수는 " + ((areaKm[area]/fuel)/tankSize) + "번 입니다.");
+        System.out.println(name + "가 운행시 들어갈 총 비용은 " + ((areaKm[area]/fuel)*2000));
     }
-    public void setGasStation(int area) {
-        int needOil = areaKm[area] / fuel;
-        int countOil = needOil / tankSize;
-        System.out.println(name + "차량이 주유소에 들려야할 횟수는 " + (countOil+1) + "번 입니다.");
-    }
-    public void setAmount(int area) {
-        int totalAmount = (areaKm[area] / fuel) * 2000;
-        System.out.println("들어갈 총 비용은 " + totalAmount + "원 입니다.");
-    }
+    abstract void turboOnOff();
 }
 class SportsCar extends Car {
     boolean isTurbo;
@@ -38,8 +31,8 @@ class SportsCar extends Car {
         tankSize = 30;
         seat = 2;
         fuel = 8;
-        System.out.println(name + " 를 탑니다.");
     }
+    @Override
     void turboOnOff() {
         System.out.print("보조기능을 켜시겠습니까? (y/n) : ");
         String onOff = sc.next();
@@ -56,8 +49,8 @@ class Sedan extends Car {
         tankSize = 45;
         seat = 4;
         fuel =12;
-        System.out.println(name + " 를 탑니다.");
     }
+    @Override
     void turboOnOff() {
         System.out.print("보조기능을 켜시겠습니까? (y/n) : ");
         String onOff = sc.next();
@@ -74,8 +67,8 @@ class Bus extends Car {
         tankSize = 100;
         seat = 20;
         fuel = 5;
-        System.out.println(name + " 를 탑니다.");
     }
+    @Override
     void turboOnOff() {
         System.out.print("보조기능을 켜시겠습니까? (y/n) : ");
         String onOff = sc.next();
