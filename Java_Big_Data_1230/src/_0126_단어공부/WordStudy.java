@@ -20,6 +20,10 @@ public class WordStudy {
         str = str.toUpperCase();
         System.out.println(str);
         for (int i = 0; i < str.length(); i++) {
+            ch = str.charAt(i);
+            for (int j = 0; j < str.length(); j++) {
+                if (ch == str.charAt(j)) aa[i] += 1;
+            }
             // 2중 for문으로 돌려보고 중복된 횟수 각각 aa 배열에 저장
             // aa 배열의 값 비교해서 최댓값구하기로 뽑기
         }
