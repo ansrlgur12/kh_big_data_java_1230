@@ -2,7 +2,7 @@ package _0127_제너릭연습;
 // 제너릭 타입 : 타입 변수를 사용해 다형성 구현
 public class GenericTestEx2 {
     public static void main(String[] args) {
-        Person<String> p1 = new Person<>("곰돌이사육사");
+        Person<String> p1 = new Person<>("곰돌이 사육사");
         System.out.println(p1.info);
 
         Person<Integer> p2 = new Person<>(1004);
