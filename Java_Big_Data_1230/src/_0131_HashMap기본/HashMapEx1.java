@@ -41,7 +41,7 @@ public class HashMapEx1 {
         // 값을 수정하는 메소드
         map.replace("이준호", 91);
 
-        // Map.Entry 전체 삭제
+        // Map.Entry 전체 삭제ㅋ
         map.clear();
         System.out.println("총 Entry 수 : " + map.size());
     }
