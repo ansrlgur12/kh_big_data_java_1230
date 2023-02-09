@@ -4,10 +4,11 @@ import _0125_다중인터페이스.SportsCar;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class InOutStreamEx6 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         FileInputStream inputStream = null;
         try {
             inputStream = new FileInputStream("test.txt");
@@ -19,5 +20,6 @@ public class InOutStreamEx6 {
             String line = sc.nextLine();
             System.out.println(line);
         }
+        inputStream.close();
     }
 }
