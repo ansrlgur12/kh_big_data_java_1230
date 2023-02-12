@@ -13,9 +13,9 @@ public class InOutStreamEx2
         byte[] buffer = new byte[100];
 
         while (true) {
-//            int data = is.read(); // 1 바이트씩 읽기
-//            if (data == -1) break; // 파일의 끝에 도달
-//            System.out.print(data + " ");
+            int data = is.read(); // 1 바이트씩 읽기
+            if (data == -1) break; // 파일의 끝에 도달
+            System.out.print(data + " ");
 
             // readByteNum -> 값이 몇개가 차있는지 확인
             int readByteNum = is.read(buffer); // 매개변수로 전달한 buffer 에  값을 담음

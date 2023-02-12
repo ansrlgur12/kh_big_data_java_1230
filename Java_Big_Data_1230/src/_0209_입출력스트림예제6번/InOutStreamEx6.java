@@ -1,6 +1,5 @@
 package _0209_입출력스트림예제6번;
 
-import _0125_다중인터페이스.SportsCar;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

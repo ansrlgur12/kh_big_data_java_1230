@@ -16,6 +16,7 @@ public class SerialStreamEx1 {
         for (Board e : list) {
             System.out.println("번호 : " + e.getNumber());
             System.out.println("제목 : " + e.getTitle());
+            System.out.println("장르 : " + e.getContent());
             System.out.println("연출 : " + e.getWriter());
             System.out.println("시간 : " + sdf.format(e.getDate()));
             System.out.println("===================================");
