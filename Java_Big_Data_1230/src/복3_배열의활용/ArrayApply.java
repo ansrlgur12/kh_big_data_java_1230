@@ -13,7 +13,6 @@ public class ArrayApply {
         for (int i = 0; i < arr1.length; i++) {
             arr2[i+3] = arr1[i];
         }
-
         System.out.println(Arrays.toString(arr2));
     }
 }
