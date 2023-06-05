@@ -8,13 +8,18 @@ import java.util.HashSet;
 
 public class UnionEx {
     public static void main(String[] args) {
-        HashSet<Integer> s1 = new HashSet<>(Arrays.asList(1,2,3,4,5,6));
-        HashSet<Integer> s2 = new HashSet<>(Arrays.asList(4,5,6,7,8,9));
+        HashSet<Integer> s1 = new HashSet<>(Arrays.asList(1,2,3,4,5,6,8,9,10));
+        HashSet<Integer> s2 = new HashSet<>(Arrays.asList(1,4,5,6,7,8,9));
         //s1.addAll(s2); // 합집합 : 1, 2, 3, 4, 5, 6, 7, 8, 9
         //System.out.println(s1);
         //s1.retainAll(s2); // 교집합 : 4, 5, 6
         //System.out.println(s1);
         s1.removeAll(s2); // 차집합 : 1, 2, 3
         System.out.println(s1);
+        int sum = 0;
+        for (Integer e : s1) {
+            sum += e.intValue();
+
+        }System.out.print(sum);
     }
 }
